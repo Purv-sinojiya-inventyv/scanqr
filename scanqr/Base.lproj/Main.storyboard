@@ -19,38 +19,45 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baE-On-F5T">
                                 <rect key="frame" x="20" y="478" width="353" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <action selector="selectImageTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fTJ-0X-0TK"/>
-                                </connections>
+                                <buttonConfiguration key="configuration" style="filled" title="Uplod from Device"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FSH-mW-KuX">
                                 <rect key="frame" x="39.333333333333343" y="69" width="314.33333333333326" height="340.66666666666669"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCw-Xa-1rY">
-                                <rect key="frame" x="183" y="596" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGT-D7-pQc">
+                                <rect key="frame" x="20" y="533" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Scan from Cemera"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bC1-fY-rag">
+                                <rect key="frame" x="20" y="588" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Uplod from vision"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="FSH-mW-KuX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="6Kh-wp-HJp"/>
                             <constraint firstItem="baE-On-F5T" firstAttribute="top" secondItem="FSH-mW-KuX" secondAttribute="bottom" constant="68.329999999999998" id="Abg-Rn-X9q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bC1-fY-rag" secondAttribute="trailing" constant="20" id="AfA-IZ-OHq"/>
                             <constraint firstItem="baE-On-F5T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Cva-5d-mQh"/>
+                            <constraint firstItem="RGT-D7-pQc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GJo-w2-w3h"/>
+                            <constraint firstItem="bC1-fY-rag" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HUc-Jk-c2Z"/>
                             <constraint firstItem="FSH-mW-KuX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JbR-Ko-OAF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RGT-D7-pQc" secondAttribute="trailing" constant="20" id="Pug-aO-yhP"/>
                             <constraint firstItem="FSH-mW-KuX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="fA6-U9-zYn"/>
+                            <constraint firstItem="bC1-fY-rag" firstAttribute="top" secondItem="RGT-D7-pQc" secondAttribute="bottom" constant="20" id="fv2-7r-IaH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="baE-On-F5T" secondAttribute="trailing" constant="20" id="hJ4-zF-Hb8"/>
                             <constraint firstItem="FSH-mW-KuX" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="nyT-oV-GCK"/>
+                            <constraint firstItem="RGT-D7-pQc" firstAttribute="top" secondItem="baE-On-F5T" secondAttribute="bottom" constant="20" id="uRv-LM-1xV"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="FSH-mW-KuX" id="nm7-LO-z9j"/>
-                        <outlet property="messageLabel" destination="qCw-Xa-1rY" id="1Fw-pR-SFF"/>
-                        <outlet property="selectImageButton" destination="baE-On-F5T" id="Tgt-bD-hkJ"/>
+                        <outlet property="imageView" destination="FSH-mW-KuX" id="eGN-IB-JL4"/>
+                        <outlet property="scanQRCodeButton" destination="RGT-D7-pQc" id="pMh-yV-XAl"/>
+                        <outlet property="scanUsingVisionButton" destination="bC1-fY-rag" id="qLU-Lm-kVe"/>
+                        <outlet property="selectImageButton" destination="baE-On-F5T" id="Z2h-Yn-t9i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
